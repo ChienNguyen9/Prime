@@ -15,14 +15,14 @@ public class MainActivity extends AppCompatActivity {
     private Button mCheckPrimeButton;
 
     private void update(){
-        if (mPrime.getStoreNumber() == "1") {
-            Toast.makeText(this, R.string.prime_number, Toast.LENGTH_LONG).show();
-        }else{
+        if (mPrime.isValidNumber() && (mPrime.getStoreNumber() != null)) {
             if (mPrime.isCheckPrime()) {
                 Toast.makeText(this, R.string.prime_number, Toast.LENGTH_LONG).show();
-            }else{
+            } else {
                 Toast.makeText(this, R.string.not_prime_number, Toast.LENGTH_LONG).show();
             }
+        }else{
+            Toast.makeText(this, R.string.non_digit, Toast.LENGTH_LONG).show();
         }
     }
 

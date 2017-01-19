@@ -7,7 +7,7 @@ package com.opz.android.prime;
 public class Prime {
     private String mStoreNumber;
 
-    public String getStoreNumber() {
+    public String getStoreNumber(){
         return mStoreNumber;
     }
 
@@ -21,6 +21,15 @@ public class Prime {
             if (number % i == 0) {
                 return false;
             }
+        }
+        return true;
+    }
+
+    public boolean isValidNumber() {
+        try {
+            Integer.parseInt(mStoreNumber);
+        } catch (NumberFormatException ex) {
+            return false;
         }
         return true;
     }
