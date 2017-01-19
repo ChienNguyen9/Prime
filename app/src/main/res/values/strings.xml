@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Prime</string>
     <string name="enter_button">Enter</string>
+    <string name="prime_number">Yes</string>
+    <string name="not_prime_number">No</string>
+    <string name="non_digit">Non-Digit Number</string>
 </resources>
